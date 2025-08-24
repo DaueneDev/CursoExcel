@@ -51,8 +51,8 @@ const Hero: React.FC = () => {
                 <span className="text-red-600 font-bold text-lg">OFERTA ESPECIAL</span>
               </div>
               <div className="flex items-baseline gap-4">
-                <span className="text-2xl text-gray-500 line-through">3.500 MT</span>
-                <span className="text-5xl font-bold text-green-600">497 MT</span>
+                <span className="text-l text-gray-500 line-through">3.500 MT</span>
+                <span className="text-2xl font-bold text-green-600">497 MT</span>
                 <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-bold">
                   -86%
                 </span>
