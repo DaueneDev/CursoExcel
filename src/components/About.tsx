@@ -110,7 +110,7 @@ const About: React.FC = () => {
             className="relative"
           >
             <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+              src="/img.png"
               alt="Aprendendo Excel"
               className="rounded-2xl shadow-lg w-full"
             />
