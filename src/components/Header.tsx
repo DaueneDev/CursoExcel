@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { FacebookPixel } from '../utils/facebookPixel';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,6 +46,7 @@ const Header: React.FC = () => {
               href="https://checkout.escalepay.com/3338211"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => FacebookPixel.trackInitiateCheckout()}
               className="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
             >
               Começar Agora
@@ -84,8 +86,11 @@ const Header: React.FC = () => {
                 href="https://checkout.escalepay.com/3338211"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  FacebookPixel.trackInitiateCheckout();
+                  setIsMenuOpen(false);
+                }}
                 className="bg-green-600 text-white block px-3 py-2 rounded-lg font-semibold text-center mt-4"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Começar Agora
               </a>

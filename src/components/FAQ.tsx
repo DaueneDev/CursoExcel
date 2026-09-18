@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Star, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FacebookPixel } from '../utils/facebookPixel';
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -154,6 +155,7 @@ const FAQ: React.FC = () => {
               href="https://checkout.escalepay.com/3338211"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => FacebookPixel.trackInitiateCheckout()}
               className="bg-white text-green-600 px-12 py-4 rounded-lg font-bold text-xl hover:bg-gray-100 transition-colors shadow-lg mb-6 flex items-center justify-center"
             >
               💳 Quero Começar Agora

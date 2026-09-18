@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { PlayCircle, Users, Clock, Download, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { FacebookPixel } from '../utils/facebookPixel';
 
 const Hero: React.FC = () => {
+  useEffect(() => {
+    FacebookPixel.trackViewContent('Excel Course - Hero');
+  }, []);
 
   return (
     <section id="inicio" className="bg-gradient-to-br from-green-50 to-blue-50 min-h-screen flex items-center pt-20">
@@ -79,6 +83,7 @@ const Hero: React.FC = () => {
                 href="https://checkout.escalepay.com/3338211"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => FacebookPixel.trackInitiateCheckout()}
                 className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-colors text-center flex items-center justify-center"
               >
                 Começar Agora

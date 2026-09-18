@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CheckCircle, ArrowLeft, Clock, Shield, Download, FileText, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { FacebookPixel } from '../utils/facebookPixel';
 
 const ThankYou: React.FC = () => {
   const whatsappNumber = "+258844948189";
   const whatsappMessage = "Olá! Acabei de comprar o Curso de Microsoft Excel e gostaria de suporte. Obrigado!";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+  useEffect(() => {
+    FacebookPixel.trackPurchase(497);
+  }, []);
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center px-4">
       <div className="max-w-2xl mx-auto text-center">

@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Check, Star, Download, Play, Users, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { FacebookPixel } from '../utils/facebookPixel';
 
 const Pricing: React.FC = () => {
+  useEffect(() => {
+    FacebookPixel.trackViewContent('Excel Course - Pricing');
+    FacebookPixel.trackLead();
+  }, []);
 
   const features = [
     'Acesso vitalício a todas as aulas',
@@ -138,6 +143,7 @@ const Pricing: React.FC = () => {
               href="https://checkout.escalepay.com/3338211"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => FacebookPixel.trackInitiateCheckout()}
               className="w-full py-4 px-6 bg-green-600 text-white rounded-lg font-semibold text-xl hover:bg-green-700 transition-colors mb-4 flex items-center justify-center"
             >
               Quero Começar Agora
