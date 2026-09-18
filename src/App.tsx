@@ -6,6 +6,7 @@ import Benefits from './components/Benefits';
 import Testimonials from './components/Testimonials';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
+import Footer from './components/Footer';
 import ThankYou from './components/ThankYou';
 
 // Landing Page Component
@@ -18,6 +19,7 @@ const LandingPage: React.FC = () => {
       <Testimonials />
       <Pricing />
       <FAQ />
+      <Footer />
     </div>
   );
 };

@@ -42,12 +42,12 @@ const Header: React.FC = () => {
           {/* CTA Button */}
           <div className="hidden md:flex">
             <a
-              href="https://wa.me/258844948189?text=Quero%20adquirir%20o%20curso%20completo%20de%20Microsoft%20Excel."
+              href="https://checkout.escalepay.com/3338211"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
             >
-              Comprar Agora
+              Começar Agora
             </a>
           </div>
 
@@ -81,11 +81,13 @@ const Header: React.FC = () => {
                 </a>
               ))}
               <a
-                href="#precos"
+                href="https://checkout.escalepay.com/3338211"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-green-600 text-white block px-3 py-2 rounded-lg font-semibold text-center mt-4"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Comprar Agora
+                Começar Agora
               </a>
             </div>
           </motion.div>

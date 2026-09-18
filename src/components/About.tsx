@@ -53,6 +53,7 @@ const About: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Desenvolvido por especialistas com mais de 15 anos de experiência. 
             Aulas pré-gravadas que você pode assistir online ou baixar para seu dispositivo.
+            Após o pagamento, você recebe um guia em PDF com todos os links de acesso às aulas.
           </p>
         </motion.div>
 

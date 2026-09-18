@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Star, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const navigate = useNavigate();
 
 
 
   const faqs = [
+    {
+      question: 'Como funciona o acesso às aulas?',
+      answer: 'Após a confirmação do pagamento, você receberá um guia em PDF contendo todos os links de acesso às videoaulas. Basta clicar nos links no PDF para assistir às aulas quando e onde quiser!'
+    },
     {
       question: 'Por quanto tempo tenho acesso ao curso?',
       answer: 'O acesso é vitalício! Uma vez que você compra o curso, pode assistir as aulas para sempre, quantas vezes quiser.'
@@ -40,7 +42,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: 'Como funciona o suporte?',
-      answer: 'Oferecemos suporte por Whatsapp. Nossa equipa responde em até 24 horas.'
+      answer: 'Oferecemos suporte por email e WhatsApp. Nossa equipa responde em até 24 horas.'
     }
   ];
 
@@ -149,12 +151,12 @@ const FAQ: React.FC = () => {
             </div>
 
             <a
-              href="https://wa.me/258844948189?text=Quero%20adquirir%20o%20curso%20completo%20de%20Microsoft%20Excel."
+              href="https://checkout.escalepay.com/3338211"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-green-600 px-12 py-4 rounded-lg font-bold text-xl hover:bg-gray-100 transition-colors shadow-lg mb-6 flex items-center justify-center"
             >
-              💳 COMPRAR AGORA
+              💳 Quero Começar Agora
             </a>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm opacity-90">

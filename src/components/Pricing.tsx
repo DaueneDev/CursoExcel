@@ -1,14 +1,8 @@
 import React from 'react';
 import { Check, Star, Download, Play, Users, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 
 const Pricing: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handlePurchase = () => {
-    navigate('/obrigado');
-  };
 
   const features = [
     'Acesso vitalício a todas as aulas',
@@ -17,7 +11,8 @@ const Pricing: React.FC = () => {
     'Exercícios e projetos práticos',
     'Download liberado para todas as aulas',
     'Assista online ou offline',
-    'Suporte por email',
+    'Guia PDF com links de acesso às aulas',
+    'Suporte por email e WhatsApp',
     'Atualizações gratuitas',
     'Templates e planilhas prontas',
     'Comunidade de alunos'
@@ -40,6 +35,25 @@ const Pricing: React.FC = () => {
             Investimento único que se paga rapidamente. Mais de 180 horas de conteúdo 
             pré-gravado para você assistir no seu ritmo.
           </p>
+
+          {/* PDF Access Notice */}
+          <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 max-w-3xl mx-auto mb-8">
+            <div className="flex items-start gap-4">
+              <div className="bg-blue-100 p-3 rounded-lg">
+                <Download className="text-blue-600" size={24} />
+              </div>
+              <div className="text-left">
+                <h3 className="font-bold text-blue-900 text-lg mb-2">
+                  📄 Acesso via Guia PDF
+                </h3>
+                <p className="text-blue-800 text-sm leading-relaxed">
+                  Após a confirmação do pagamento, você receberá um <strong>guia em PDF</strong> contendo 
+                  todos os links de acesso às videoaulas. Basta clicar nos links no PDF para assistir às aulas 
+                  quando e onde quiser!
+                </p>
+              </div>
+            </div>
+          </div>
           
           {/* Limited Time Offer */}
           <div className="inline-flex items-center gap-2 bg-red-100 text-red-700 px-6 py-3 rounded-full font-semibold">
@@ -121,7 +135,7 @@ const Pricing: React.FC = () => {
 
             {/* CTA Button */}
             <a
-              href="https://wa.me/258844948189?text=Quero%20adquirir%20o%20curso%20completo%20de%20Microsoft%20Excel."
+              href="https://checkout.escalepay.com/3338211"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-4 px-6 bg-green-600 text-white rounded-lg font-semibold text-xl hover:bg-green-700 transition-colors mb-4 flex items-center justify-center"

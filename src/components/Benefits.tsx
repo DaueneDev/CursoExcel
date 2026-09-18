@@ -69,6 +69,7 @@ const Benefits: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Mais que um curso, é um investimento no seu futuro profissional. 
             Aulas pré-gravadas de alta qualidade com total flexibilidade.
+            Após o pagamento, você recebe um guia em PDF com todos os links de acesso às aulas.
           </p>
         </motion.div>
 

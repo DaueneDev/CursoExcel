@@ -1,17 +1,11 @@
 import React from 'react';
 import { PlayCircle, Users, Clock, Download, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 
 const Hero: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handlePurchase = () => {
-    navigate('/obrigado');
-  };
 
   return (
-    <section id="inicio" className="bg-gradient-to-br from-green-50 to-blue-50 min-h-screen flex items-center">
+    <section id="inicio" className="bg-gradient-to-br from-green-50 to-blue-50 min-h-screen flex items-center pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -27,6 +21,23 @@ const Hero: React.FC = () => {
               Aprenda as técnicas mais avançadas do Excel com aulas pré-gravadas de alta qualidade. 
               Mais de 150 aulas práticas que você pode assistir online ou baixar.
             </p>
+
+            {/* PDF Access Notice */}
+            <div className="mt-6 bg-blue-50 border-2 border-blue-200 rounded-xl p-4">
+              <div className="flex items-start gap-3">
+                <div className="bg-blue-100 p-2 rounded-lg">
+                  <Download className="text-blue-600" size={20} />
+                </div>
+                <div className="text-left">
+                  <p className="text-blue-900 font-semibold text-sm">
+                    📄 Acesso via Guia PDF
+                  </p>
+                  <p className="text-blue-800 text-xs leading-relaxed">
+                    Após o pagamento, você recebe um <strong>guia em PDF</strong> com todos os links de acesso às videoaulas
+                  </p>
+                </div>
+              </div>
+            </div>
 
             {/* Stats */}
             <div className="flex flex-wrap gap-6 mt-8">
@@ -65,7 +76,7 @@ const Hero: React.FC = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <a
-                href="https://wa.me/258844948189?text=Quero%20adquirir%20o%20curso%20completo%20de%20Microsoft%20Excel."
+                href="https://checkout.escalepay.com/3338211"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-colors text-center flex items-center justify-center"
